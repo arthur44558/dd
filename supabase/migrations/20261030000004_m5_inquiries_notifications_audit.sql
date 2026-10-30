@@ -72,10 +72,13 @@ CREATE INDEX idx_notifications_unread ON notifications(recipient_id, is_read, cr
 
 -- 4. AUDIT EVENTS TABLE (STRICTLY IMMUTABLE)
 -- Immutable system-wide audit trail for compliance and forensic verification
+DROP TABLE IF EXISTS audit_events CASCADE;
+
 CREATE TABLE audit_events (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   actor_id UUID REFERENCES profiles(id) ON DELETE SET NULL,
   actor_role user_role,
+  role TEXT,
   action TEXT NOT NULL,
   target_type TEXT NOT NULL,
   target_id TEXT NOT NULL,
@@ -85,6 +88,9 @@ CREATE TABLE audit_events (
   before_state JSONB,
   after_state JSONB,
   metadata JSONB NOT NULL DEFAULT '{}'::jsonb,
+  details JSONB NOT NULL DEFAULT '{}'::jsonb,
+  ip_address TEXT,
+  user_agent TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
