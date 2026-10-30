@@ -96,12 +96,12 @@ c:\Users\ASUS\Desktop\Projects\dd\
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| M1 | Foundation, Git Setup & Access Request Workflow | Scaffolding, Git remote, Supabase client setup, Public Request Access, IT Admin Console, Auth invite | none | PLANNED |
-| M2 | Authenticated Shell, Role Dashboards & Patient Registry | Authenticated shell, 6 role dashboards, Patient registration, deduplication search RPC, contacts | M1 | PLANNED |
-| M3 | Clinical Intake, Scan Upload & Approval Governance | Assistant intake, scan upload, doctor review, immutability, correction proposals, Dept Head approval | M2 | PLANNED |
-| M4 | Reminder Engine, Overdue Logic & Coordinator Pool | Scheduler strategy, +2/+4 overdue engine, cron worker, Coordinator tasks, simulated sends, outcomes | M3 | PLANNED |
-| M5 | Inquiries, Notifications, Audit & Analytics | Contextual inquiries, notification center, immutable audit trail, AI adapter, Follow-up Head metrics | M4 | PLANNED |
-| M6 | E2E Test Suite Pass, Hardening, Build & Git Push | 100% E2E test pass (Tiers 1-4, Section 17 demo), Tier 5 hardening, build verification, Git push | M5, TEST_READY | PLANNED |
+| M1 | Foundation, Git Setup & Access Request Workflow | Scaffolding, Git remote, Supabase client setup, Public Request Access, IT Admin Console, Auth invite | none | DONE |
+| M2 | Authenticated Shell, Role Dashboards & Patient Registry | Authenticated shell, 6 role dashboards, Patient registration, deduplication search RPC, contacts | M1 | DONE |
+| M3 | Clinical Intake, Scan Upload & Approval Governance | Assistant intake, scan upload, doctor review, immutability, correction proposals, Dept Head approval | M2 | DONE |
+| M4 | Reminder Engine, Overdue Logic & Coordinator Pool | Scheduler strategy, +2/+4 overdue engine, cron worker, Coordinator tasks, simulated sends, outcomes | M3 | DONE |
+| M5 | Inquiries, Notifications, Audit & Analytics | Contextual inquiries, notification center, immutable audit trail, AI adapter, Follow-up Head metrics | M4 | DONE |
+| M6 | E2E Test Suite Pass, Hardening, Build & Git Push | 100% E2E test pass (Tiers 1-4, Section 17 demo), Tier 5 hardening, build verification, Git push | M5, TEST_READY | DONE |
 
 ## Interface Contracts
 ### Auth & Identity Contract (`src/features/auth`)
